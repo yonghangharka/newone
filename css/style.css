@@ -1,0 +1,609 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --darkblack: #191919;
+    --whitecolor: #ffffff;
+    --semiblack: #212121;
+    --bluecolor: #09aace;
+    --btntransition: .3s ease-in-out;
+    --borderone: .1rem solid #222;
+    --bordertwo: .2rem solid #222;
+    --borderthree: .3rem solid #222;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 5rem;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+
+button {
+    cursor: pointer;
+}
+
+.main__header_container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../image/mainback.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.main__navigation_bar {
+    width: 100%;
+    height: 7rem;
+    padding: 0 3rem;
+    background: #e6e6e6;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.main__navigation_logo a img {
+    width: 18rem;
+    height: 6.5rem;
+}
+
+.main__navigation_link {
+    display: flex;
+}
+
+.main__navigation_link li {
+    padding: .5rem 1rem;
+}
+
+.main__navigation_link li a {
+    display: block;
+    font-size: 1.6rem;
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+    color: var(--darkblack);
+    font-weight: 700;
+}
+
+.main__navigation_link a.active,
+.main__navigation_link a:hover {
+    color: var(--bluecolor);
+}
+
+#main__menu_bar {
+    display: none;
+    font-size: 3.2rem;
+    cursor: pointer;
+    color: var(--darkblack);
+}
+
+.main_content {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.main_content h1 {
+    letter-spacing: 1.1rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+
+.main_content p {
+    font-size: 1.7rem;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 2rem;
+    color: #000;
+    text-transform: capitalize;
+    padding: .5rem 2rem;
+    margin-top: 1rem;
+    border: none;
+    outline: .1rem solid #000;
+    background: #eee8e8;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: var(--bluecolor);
+}
+
+/* ===================== about ========================== */
+.about {
+    width: 80%;
+    margin: auto;
+    padding: 5rem 0;
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.about h2 {
+    font-size: 3.5rem;
+    color: var(--darkblack);
+    margin-top: 5rem
+}
+
+.about p {
+    font-size: 1.6rem;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about_col {
+    flex: 0 1 32%;
+    margin-top: 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+.about_col img {
+    width: 100%;
+}
+
+.about_col .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    transition: .3s;
+}
+
+.about_col .content:hover {
+    background: rgba(0, 0, 200, 0.5);
+}
+
+.about_col .content2 {
+    position: absolute;
+    width: 100%;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: .3s linear;
+}
+
+.about_col:hover .content2 {
+    opacity: 1;
+    top: 50%;
+}
+
+.content2 h2 {
+    font-size: 2rem;
+    color: var(--whitecolor);
+    text-transform: capitalize;
+}
+
+.content2 p {
+    font-size: 1.5rem;
+    color: var(--whitecolor);
+}
+
+/* ================== avaibalitysection ===================== */
+.avaibality {
+    width: 80%;
+    margin: auto;
+    padding-top: 5rem 0;
+    text-align: center;
+    margin-bottom: 10rem;
+}
+
+.avaibality h2 {
+    font-size: 3.5rem;
+    text-transform: capitalize;
+    padding: 1rem;
+}
+
+.avaibality .row {
+    background: #222;
+}
+
+.available_col {
+    flex: 0 1 48%;
+    padding: 2rem;
+}
+
+.available_col h2 {
+    font-size: 2.3rem;
+    color: var(--whitecolor);
+}
+
+/* .available_col p{
+    font-size: 1.5rem;
+    color: var(--whitecolor);
+} */
+
+
+/* =================== fpptersection ================== */
+footer {
+    background: #222;
+    padding: 3rem 2rem;
+}
+
+.grid-row {
+    width: 99%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 1rem;
+}
+
+.footer_col {
+    text-align: center;
+}
+
+.footer_col h4 {
+    font-size: 1.8rem;
+    padding: .5rem 0;
+    text-transform: capitalize;
+    color: var(--bluecolor);
+}
+
+.footer_col p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: var(--whitecolor);
+}
+
+.footer_col ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.footer_col ul li {
+    margin: .5rem 0;
+}
+
+.footer_col ul li a {
+    font-size: 1.4rem;
+    color: var(--whitecolor);
+    text-transform: capitalize;
+}
+
+.footer_col .social_links {
+    margin-top: 1rem;
+}
+
+.footer_col .social_link a {
+    display: inline-block;
+    font-size: 2rem;
+    color: var(--whitecolor);
+    margin: 2rem 1rem;
+}
+
+footer .copyright {
+    margin-top: 3rem;
+}
+
+.copyright h5 {
+    font-size: 1.7rem;
+    color: var(--whitecolor);
+    text-align: center;
+}
+
+
+
+/*  ===================== servicepagesection ==================== */
+
+.service__header_container {
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../image/mainback.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.service__header_container h1 {
+    font-size: 4rem;
+    width: 90%;
+    color: #fff;
+    top: 25%;
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.service_section {
+    width: 90%;
+    margin: auto;
+    padding-top: 5rem;
+}
+
+.service_section .row {
+    padding: 3rem 0;
+}
+
+.service_section h2 {
+    font-size: 3.5rem;
+    text-transform: capitalize;
+    text-decoration: underline;
+    font-weight: 700;
+    text-align: center;
+}
+
+.service_section_col {
+    flex: 0 1 48%;
+}
+
+.service_section_col img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.service_section_col h3 {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+}
+
+.service_section_col p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.contact__header_container {
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../image/mainback.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.contact__header_container h1 {
+    font-size: 4rem;
+    width: 90%;
+    color: #fff;
+    top: 25%;
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.contact_section {
+    width: 80%;
+    margin: auto;
+    padding: 5rem 0;
+}
+
+.contact_sec-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact_content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.contact_sec_col .contact_content h5 {
+    font-size: 2.2rem;
+    text-transform: capitalize;
+}
+
+.contact_sec_col .contact_content p {
+    font-size: 1.3rem;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #181616;
+}
+
+.contact_sec_col {
+    flex-basis: 48%;
+}
+
+
+.contact-sec_left {
+    flex-basis: 65%;
+}
+
+.contact_sec_col input,
+.contact_sec_col textarea {
+    width: 100%;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    outline: none;
+    resize: none;
+    border: .2rem solid #222;
+    caret-color: #1fff32;
+}
+
+.contact_sec_col textarea {
+    height: 15rem;
+}
+
+.contact_sec_col .button-area {
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+}
+
+.contact_sec_col .button-area span {
+    font-size: 1.6rem;
+    margin-left:3rem;
+    display: none;
+}
+
+.contact_sec_col .button-area button {
+    border: .1rem solid #000;
+    padding: 1rem 2rem;
+}
+
+.contact_sec_col .btnl:hover {
+    background: var(--bluecolor);
+}
+
+
+.hint {
+    width: 100%;
+    padding: 2rem;
+}
+
+.hint h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: #09aace;
+}
+
+/* =============== aboutpage ============== */
+.about__header_container {
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../image/mainback.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.about__header_container h1 {
+    font-size: 4rem;
+    width: 90%;
+    color: #fff;
+    top: 25%;
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.about_section {
+    width: 90%;
+    margin: auto;
+    padding: 5rem 0;
+}
+
+/* .about_section .about-row{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+} */
+
+.about_sec_col1 {
+    width: 100%;
+}
+
+.about_sec_col {
+    padding: .5rem;
+}
+
+.about_sec_col1 img {
+    width: 100%;
+}
+
+.about_sec_col h3 {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+}
+
+.about_sec_col p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+
+
+
+/* ========================  mediaquer ======================== */
+@media(max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+
+@media(max-width:768px) {
+    #main__menu_bar {
+        display: block;
+    }
+
+    .main__navigation_bar .main__navigation_link {
+        position: absolute;
+        top: 100%;
+        right: -100rem;
+        background: var(--whitecolor);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50vh;
+        transition: .5s ease-in-out;
+    }
+
+    .main__navigation_link li {
+        margin: 1rem;
+    }
+
+    .main__navigation_link.shownav {
+        right: 0;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .about-row {
+        flex-direction: column;
+    }
+
+    .main__navigation_bar {
+        padding: 0 2rem;
+    }
+
+    .main__navigation_logo a img {
+        width: 12rem;
+        height: 6rem;
+    }
+}
+
+@media(max-width:468px) {
+    html {
+        font-size: 50%;
+    }
+
+    .main__header_container h1 {
+        letter-spacing: 0;
+    }
+
+    .main__navigation_logo a img {
+        width: 12rem;
+        height: 6rem;
+    }
+
+}

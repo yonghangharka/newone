@@ -136,7 +136,9 @@ button {
     transition: .3s;
 }
 .btn:hover{
-    box-shadow: .3rem .2rem .4rem #cccbcb;
+    box-shadow: .1rem .1rem .4rem .3rem #000000;
+    border: none;
+    outline: none;
 }
 
 .btn:hover {
@@ -154,8 +156,10 @@ button {
 
 .about h2 {
     font-size: 3.5rem;
-    color: var(--darkblack);
-    margin-top: 5rem
+    color: var(--bluecolor);
+    margin-top: 5rem;
+    text-shadow: .1rem .1rem .3rem #333;
+
 }
 
 .about p {
@@ -232,6 +236,8 @@ button {
     font-size: 3.5rem;
     text-transform: capitalize;
     padding: 1rem;
+    color: var(--bluecolor);
+    text-shadow: .1rem .1rem .3rem #333;
 }
 
 .avaibality .row {
@@ -360,6 +366,8 @@ footer .copyright {
     text-decoration: underline;
     font-weight: 700;
     text-align: center;
+    color: var(--bluecolor);
+    text-shadow: .1rem .1rem .3rem #333;
 }
 
 .service_section_col {
@@ -423,12 +431,30 @@ footer .copyright {
     font-size: 2.2rem;
     text-transform: capitalize;
 }
+.contact_sec_col .contact_content p{
+    font-size: 1.4rem;
+    color: var(--darkblack);
+    text-decoration: underline;
+}
 
-.contact_sec_col .contact_content p {
-    font-size: 1.3rem;
+.contact_sec_col .contact_content a{
+    font-size: 1.5rem;
+    color: var(--bluecolor);
     text-decoration: underline;
     cursor: pointer;
-    color: #181616;
+}
+.contact_sec_col .contact_contentone{
+    display: flex;
+    flex-direction: column; 
+}
+.contact_sec_col .contact_contentone h5{
+    font-size: 2.2rem;
+}
+.contact_sec_col .contact_contentone a{
+    font-size: 1.8rem;
+    color: var(--bluecolor);
+    text-decoration: underline;
+    
 }
 
 .contact_sec_col {

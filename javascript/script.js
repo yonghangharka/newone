@@ -17,4 +17,10 @@ for (let i = 0; i<newLength; i++){
     }
 }
 
+window.addEventListener('scroll', function () {
+    var navba = document.querySelector('.main__navigation_bar');
+    navba.classList.toggle('sticky', window.scrollY > 0);
+
+});
+
 

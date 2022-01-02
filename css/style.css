@@ -254,12 +254,6 @@ button {
     color: var(--whitecolor);
 }
 
-/* .available_col p{
-    font-size: 1.5rem;
-    color: var(--whitecolor);
-} */
-
-
 /* =================== fpptersection ================== */
 footer {
     background: #222;
@@ -378,6 +372,10 @@ footer .copyright {
     width: 100%;
     height: auto;
     object-fit: cover;
+    transition: .3s ease-in-out;
+}
+.service_section_col img:hover{
+    box-shadow: 0 0 .3rem .4rem #000;
 }
 
 .service_section_col h3 {
